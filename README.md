@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Flixtionary 🎥🎮  
+A fun and challenging web game for movie lovers and word game enthusiasts! Flixtionary combines movie trivia, vocabulary, and brain-teasing puzzles in a sleek and interactive experience. Whether you're looking to test your knowledge or just want to kill some time with a creative twist, Flixtionary has you covered.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features 🚀  
+### 🎬 **Daily Challenge**  
+- Solve 5 puzzles with mystery words related to movies.  
+- Get ranked on the leaderboard based on your completion time.  
+- Compete with friends or other players to see who’s the fastest!  
 
-## Available Scripts
+### 🧩 **Clues & Hints**  
+- You have 5 guesses to figure out the mystery word for each puzzle.  
+- Need help? Unlock up to 3 additional clues or the movie title to guide you.  
 
-In the project directory, you can run:
+### 🌟 **Zen Mode**  
+- Unlimited puzzles for casual practice.  
+- Perfect for honing your skills or relaxing with some movie-inspired fun.  
 
-### `npm start`
+### 🏆 **Leaderboard**  
+- Track your performance on the daily challenge leaderboard.  
+- See where you stand among other movie trivia enthusiasts!  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Why Play?  
+Flixtionary is perfect for:  
+- Movie buffs who love a good challenge.  
+- Fans of word games like Wordle who want a unique twist.  
+- Anyone looking for a quick and fun way to test their movie knowledge.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Play  
+1. Visit the game at [Flixtionary](https://flixtionaryweb-s1o9.vercel.app/).  
+2. Start with either the **Daily Challenge** or **Zen Mode**.  
+3. Use the given clue to guess the mystery word.  
+4. Use hints if you get stuck—but remember, they come at a cost!  
+5. Solve puzzles, climb the leaderboard, and have fun! 🎉  
 
-### `npm test`
+## Feedback  
+We’d love to hear your thoughts! Drop us a message or share your best times—who knows, you might inspire the next feature! 😄  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy the game, and may the best movie buff win!  
