@@ -1,0 +1,172 @@
+// import React, { useState, useEffect } from "react";
+// import secureLocalStorage from "react-secure-storage";
+// import { Card, Spinner } from "flowbite-react";
+// import { toast, ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+// import { Modal, Button } from "flowbite-react";
+// import { FaFilm, FaLightbulb, FaGamepad } from "react-icons/fa";
+// import { GiPopcorn } from "react-icons/gi";
+
+// import { createClient } from "@supabase/supabase-js";
+
+// const DailyChallenge = () => {
+
+//   const [movieData, setMovieData] = useState(null);
+//   const [allMovies, setAllMovies] = useState([]);
+//   const [showModal, setShowModal] = useState(false);
+//   const [loading, setLoading] = useState(true);
+//   const [errorMessage, setErrorMessage] = useState("");
+//   const [guess, setGuess] = useState("");
+//   const [attempts, setAttempts] = useState([]);
+//   const [remainingGuesses, setRemainingGuesses] = useState(5);
+//   const [extraClues, setExtraClues] = useState([]);
+//   const [turnNum, setTurnNum] = useState(0); // Start from 0
+
+//   useEffect(() => {
+//     const fetchPuzzles = async () => {
+//       try {
+//         let { data: puzzles, error } = await supabase
+//           .from("puzzles")
+//           .select("*");
+
+//         console.log(puzzles);
+
+//         if (error) throw new Error(error.message);
+
+//         setAllMovies(puzzles);
+//         setTurnNum(0); // Ensure turnNum is reset
+//       } catch (err) {
+//         setErrorMessage(err.message || "Failed to fetch puzzles.");
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchPuzzles();
+//   }, []);
+
+//   useEffect(() => {
+//     if (allMovies.length > 0) {
+//       loadCurrentPuzzle();
+//     }
+//   }, [allMovies, turnNum]);
+
+//   const loadCurrentPuzzle = () => {
+//     const currentMovie = allMovies[turnNum];
+//     if (currentMovie) {
+//       setMovieData(currentMovie);
+//       setAttempts([]);
+//       setExtraClues([]);
+//       setRemainingGuesses(5);
+//     } else {
+//       setMovieData(null);
+//       setErrorMessage("No more puzzles available.");
+//     }
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     if (remainingGuesses <= 0) {
+//       toast.warn(
+//         `No more guesses left! The correct word was "${movieData.word}" from the movie "${movieData.title}".`
+//       );
+//       moveToNextPuzzle();
+//       return;
+//     }
+
+//     if (!guess) {
+//       toast.warn("Please enter a guess!");
+//       return;
+//     }
+
+//     const normalizedGuess = guess.trim().toLowerCase();
+//     const normalizedWord = movieData.word.toLowerCase();
+
+//     if (normalizedGuess === normalizedWord) {
+//       toast.success(
+//         `Congratulations! You guessed it right! This word was from the movie "${movieData.title}".`
+//       );
+
+//       // Record the correct guess
+//       setAttempts((prevAttempts) => [
+//         ...prevAttempts,
+//         { guess, clue: "Correct!" },
+//       ]);
+
+//       moveToNextPuzzle();
+//     } else {
+//       handleIncorrectGuess();
+//     }
+//   };
+
+//   const handleIncorrectGuess = () => {
+//     if (remainingGuesses <= 0) {
+//       toast.error(
+//         `No more guesses left! The correct word was "${movieData.word}" from the movie "${movieData.title}".`
+//       );
+//       moveToNextPuzzle();
+//       return;
+//     }
+
+//     const newClue =
+//       extraClues.length < movieData.clues.length
+//         ? movieData.clues[extraClues.length]
+//         : "No more clues available.";
+
+//     if (extraClues.length < 3) {
+//       setExtraClues([...extraClues, newClue]);
+//       toast.warning(`Incorrect Guess!`);
+//       toast.dark(`Extra clue: ${newClue}`);
+//     }
+
+//     setRemainingGuesses((prev) => Math.max(0, prev - 1));
+
+//     // Add the guess and clue to attempts
+//     setAttempts((prevAttempts) => [
+//       ...prevAttempts,
+//       { guess, clue: newClue || null },
+//     ]);
+
+//     setGuess("");
+
+//     if (remainingGuesses - 1 <= 0) {
+//       toast.warning(
+//         `No more guesses left! The correct word was "${movieData.word}" from the movie "${movieData.title}".`
+//       );
+//       moveToNextPuzzle();
+//     }
+//   };
+
+//   const moveToNextPuzzle = () => {
+//     setTimeout(() => {
+//       setTurnNum((prev) => prev + 1);
+//       setMovieData(null); // Clear movie data
+//     }, 2000);
+//   };
+
+//   if (loading) {
+//     return (
+//       <div className="flex h-64 items-center justify-center">
+//         <Spinner size="xl" />
+//       </div>
+//     );
+//   }
+
+//   if (errorMessage) {
+//     return (
+//       <div className="p-4 text-center text-red-500">Error: {errorMessage}</div>
+//     );
+//   }
+
+//   if (!movieData) {
+//     return (
+//       <div className="text-center text-white">
+//         <p>No more puzzles. Thanks for playing!</p>
+//       </div>
+//     );
+//   }
+
+// };
+
+// export default DailyChallenge;
